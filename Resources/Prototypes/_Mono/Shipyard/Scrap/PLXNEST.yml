@@ -1,0 +1,41 @@
+#Author: AnonyAnomaly, AKA PLEX-96
+
+- type: vessel
+  id: PLXNEST
+  parent: BaseVesselAntag
+  name: PLX NEST
+  description: A capital class mothership of PLXCOR design. Built to lead and sustain scores of PLEX units on combat operations across an entire sector. Equipped with advanced laser weaponry and shielding, though the armor is rather weak in some areas.
+  price: 540000
+  category: Large
+  group: Scrap
+  access: Mercenary
+  shuttlePath: /Maps/_Mono/Shuttles/Scrap/PLXNESTgrid.yml
+  guidebookPage: Null
+  class:
+  - Capital
+  - Frigate
+  engine:
+  - AME
+
+- type: gameMap
+  id: PLXNEST
+  mapName: 'PLX-NEST'
+  mapPath: /Maps/_Mono/Shuttles/Scrap/PLXNESTgrid.yml
+  minPlayers: 0
+  stations:
+    PLXNEST:
+      stationProto: StandardFrontierVessel
+      gridComponents:
+      - type: VesselInfo
+        description: "The air feels just a little bit colder"
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'PLX-NEST MIL{1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Mercenary: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+
